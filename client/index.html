@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collabify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- AUTH SECTION -->
+  <div id="auth-section">
+    <div class="auth-box">
+      <h1>Collabify</h1>
+      <p class="tagline">Team goals, made simple.</p>
+
+      <div class="tab-buttons">
+        <button onclick="showTab('login')" id="login-tab" class="active">Login</button>
+        <button onclick="showTab('register')" id="register-tab">Register</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div id="login-form">
+        <input type="email" id="login-email" placeholder="Email" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+      </div>
+
+      <!-- REGISTER FORM -->
+      <div id="register-form" style="display:none">
+        <input type="text" id="reg-username" placeholder="Username" />
+        <input type="email" id="reg-email" placeholder="Email" />
+        <input type="password" id="reg-password" placeholder="Password" />
+        <button onclick="register()">Register</button>
+      </div>
+
+      <p id="auth-message"></p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div id="dashboard-section" style="display:none">
+    <nav>
+      <h2>Collabify</h2>
+      <button onclick="logout()">Logout</button>
+    </nav>
+
+    <div class="dashboard">
+
+      <!-- WORKSPACES -->
+      <div class="card">
+        <h3>Workspaces</h3>
+        <input type="text" id="workspace-name" placeholder="Workspace name" />
+        <input type="text" id="workspace-desc" placeholder="Description" />
+        <button onclick="createWorkspace()">+ Create Workspace</button>
+        <ul id="workspace-list"></ul>
+      </div>
+
+      <!-- GOALS -->
+      <div class="card">
+        <h3>Goals</h3>
+        <input type="text" id="goal-title" placeholder="Goal title" />
+        <input type="text" id="goal-desc" placeholder="Description" />
+        <button onclick="createGoal()">+ Create Goal</button>
+        <ul id="goal-list"></ul>
+      </div>
+
+      <!-- TASKS -->
+      <div class="card">
+        <h3>Tasks</h3>
+        <input type="text" id="task-title" placeholder="Task title" />
+        <input type="text" id="task-desc" placeholder="Description" />
+        <button onclick="createTask()">+ Create Task</button>
+        <ul id="task-list"></ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

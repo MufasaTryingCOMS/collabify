@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  color: #333;
+}
+
+/* AUTH */
+#auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-box h1 {
+  font-size: 2rem;
+  color: #6c63ff;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  color: #888;
+  margin-bottom: 24px;
+}
+
+.tab-buttons {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #6c63ff;
+}
+
+.tab-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: white;
+  color: #6c63ff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.tab-buttons button.active {
+  background: #6c63ff;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #574fd6;
+}
+
+#auth-message {
+  margin-top: 12px;
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6c63ff;
+  color: white;
+  padding: 16px 32px;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+}
+
+nav button {
+  width: auto;
+  padding: 8px 20px;
+  background: white;
+  color: #6c63ff;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 32px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 16px;
+  color: #6c63ff;
+  font-size: 1.2rem;
+}
+
+.card input {
+  margin-bottom: 8px;
+}
+
+.card button {
+  margin-bottom: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px 12px;
+  background: #f8f8ff;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 3px solid #6c63ff;
+}
+
+ul li button {
+  width: auto;
+  padding: 4px 10px;
+  background: #ff6b6b;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
