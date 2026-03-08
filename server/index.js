@@ -13,10 +13,14 @@ app.use(express.json());
 const authRoutes = require('./routes/auth');
 const workspaceRoutes = require('./routes/workspaces');
 const goalRoutes = require('./routes/goals');
+const taskRoutes = require('./routes/tasks');
+const commentRoutes = require('./routes/comments');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/workspaces', workspaceRoutes);
 app.use('/api/goals', goalRoutes);
+app.use('/api/tasks', taskRoutes);
+app.use('/api/comments', commentRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
